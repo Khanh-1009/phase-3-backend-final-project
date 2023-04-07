@@ -25,4 +25,5 @@ Brand.create([
     }
 ])
 
+
 puts "✅ Done seeding!"
