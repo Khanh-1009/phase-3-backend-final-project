@@ -20,4 +20,14 @@ class ApplicationController < Sinatra::Base
     brand = Brand.find_by(id: params[:id])
     brand.to_json
   end
+
+  post '/products' do
+    product = Product.create(
+      name: params[:name],
+      image: params[:image],
+      price: params[:price],
+      brand_id: params[:brand_id]
+    )
+    product.to_json
+  end
 end
