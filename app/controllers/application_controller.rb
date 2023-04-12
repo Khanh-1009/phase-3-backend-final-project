@@ -1,24 +1,25 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
-  # Add your routes here
-  get "/" do
-    { message: "Good luck with your project!" }.to_json
-  end
-
-  get '/products' do
-    products = Product.all 
-    products.to_json
-  end
-
+  # Brands Routes
   get '/brands' do
     brands = Brand.all 
-    brands.to_json
+    brands.to_json(include: :products)
   end
 
   get '/brands/:id' do
     brand = Brand.find_by(id: params[:id])
-    brand.to_json
+    if brand
+      brand.to_json(include: :products)
+    else
+      "404 - Brand not found"
+    end
+  end
+
+  # Products Routes
+  get '/products' do
+    products = Product.all 
+    products.to_json
   end
 
   post '/products' do
