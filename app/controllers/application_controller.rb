@@ -16,6 +16,13 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  post '/brands' do
+    brand = Brand.create(
+      name: params[:name]
+    )
+    brand.to_json
+  end
+
   # Products Routes
   get '/products' do
     products = Product.all 
