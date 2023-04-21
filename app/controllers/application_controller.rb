@@ -7,14 +7,6 @@ class ApplicationController < Sinatra::Base
     brands.to_json(include: :products)
   end
 
-  get '/brands/:id' do
-    brand = Brand.find_by(id: params[:id])
-    if brand
-      brand.to_json(include: :products)
-    else
-      "404 - Brand not found"
-    end
-  end
 
   post '/brands' do
     brand = Brand.create(
@@ -24,19 +16,19 @@ class ApplicationController < Sinatra::Base
   end
 
   # Products Routes
-  get '/products' do
-    products = Product.all 
-    products.to_json
-  end
+  # get '/products' do
+  #   products = Product.all 
+  #   products.to_json
+  # end
 
   post '/products' do
-    product = Product.create(params)
-    # product = Product.create(
-    #   name: params[:name],
-    #   image: params[:image],
-    #   price: params[:price],
-    #   brand_id: params[:brand_id]
-    # )
+    brand = Brand.find(params[:brand_id])
+    # product = Product.create(params)
+    product = brand.products.create(
+      name: params[:name],
+      image: params[:image],
+      price: params[:price]
+    )
     product.to_json
   end
 
@@ -51,6 +43,5 @@ class ApplicationController < Sinatra::Base
   delete '/products/:id' do
     product = Product.find_by(id: params[:id])
     product.destroy
-    product.to_json
   end
 end
