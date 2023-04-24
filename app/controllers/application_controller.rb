@@ -23,7 +23,6 @@ class ApplicationController < Sinatra::Base
 
   post '/products' do
     brand = Brand.find(params[:brand_id])
-    # product = Product.create(params)
     product = brand.products.create(
       name: params[:name],
       image: params[:image],
