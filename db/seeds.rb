@@ -1,29 +1,23 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
-# Brand.create([
-#     {
-#         name: "Beauty of Joseon"
-#     },
-#     {
-#         name: "Isntree"
-#     },
-#     {
-#         name: "Laneige"
-#     },
-#     {
-#         name: "Skin1004"
-#     },
-#     {
-#         name: "COSRX"
-#     },
-#     {
-#         name: "Frudia"
-#     },
-#     {
-#         name: "Sulwhasoo"
-#     }
-# ])
+Brand.create([
+    {
+        name: "Beauty of Joseon"
+    },
+    {
+        name: "Isntree"
+    },
+    {
+        name: "Laneige"
+    },
+    {
+        name: "Skin1004"
+    },
+    {
+        name: "COSRX"
+    }
+])
 
 Product.create([
     {
@@ -182,6 +176,36 @@ Product.create([
         price: 12.49,
         brand_id: 5
     },  
+    {
+        name: "Concentrated Ginseng Renewing Emulsion",
+        image: "https://cdn.stylevana.com/media/catalog/product/cache/1/image/1000x1231/17f82f742ffe127f42dca9de82fb58b1/s/u/sulwhasoo-concentrated-ginseng-renewing-emulsion-125ml-564.jpg",
+        price: 74.69,
+        brand_id: 19
+    },
+    {
+        name: "Essential Perfecting Firming Cream",
+        image: "https://cdn.stylevana.com/media/catalog/product/cache/1/image/1000x1231/17f82f742ffe127f42dca9de82fb58b1/s/u/sulwhasoo-essential-perfecting-firming-cream-75ml-188.jpg",
+        price: 89.99,
+        brand_id: 19
+    },
+    {
+        name: "Gentle Cleansing Oil Makeup Remover",
+        image: "https://cdn.stylevana.com/media/catalog/product/cache/1/image/1000x1231/17f82f742ffe127f42dca9de82fb58b1/s/u/sulwhasoo-gentle-cleansing-oil-200ml-534.jpg",
+        price: 30.99,
+        brand_id: 19
+    },
+    {
+        name: "Timetreasure Invigorating Emulsion",
+        image: "https://cdn.stylevana.com/media/catalog/product/cache/1/image/1000x1231/17f82f742ffe127f42dca9de82fb58b1/b/s/bsemsul00003_par.jpg",
+        price: 82.29,
+        brand_id: 19
+    },
+    {
+        name: "Timetreasure Extra Creamy Cleansing Foam",
+        image: "https://cdn.stylevana.com/media/catalog/product/cache/1/image/1000x1231/17f82f742ffe127f42dca9de82fb58b1/s/u/sulwhasoo-timetreasure-extra-creamy-cleansing-foam-150ml-305.jpg",
+        price: 39.69,
+        brand_id: 19
+    }
 ])
 
 
