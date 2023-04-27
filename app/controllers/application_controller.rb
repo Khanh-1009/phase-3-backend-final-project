@@ -42,5 +42,6 @@ class ApplicationController < Sinatra::Base
   delete '/products/:id' do
     product = Product.find_by(id: params[:id])
     product.destroy
+    product.to_json
   end
 end
