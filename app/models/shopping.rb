@@ -6,6 +6,7 @@ class Shopping
     def initialize(discount = 0)
         @total = 0
         @discount = discount
+        @shopping_cart = []
         @@shopping_items += 1
     end
 
@@ -15,6 +16,9 @@ class Shopping
 
     def add_products(name, price, quantity = 1)
         @total = (price * quantity) + self.total
+        quantity.times do 
+            @shopping_cart << name
+        end
     end
 
     def apply_discount
