@@ -1,5 +1,17 @@
 class Shopping
-    attr_accessor :total, :discount
+    attr_accessor :total, :discount, :shopping_cart
+
+    def total
+        @total
+    end
+
+    def total=(total)
+        @total = total
+    end
+
+    def self.return_all_total
+        
+    end
 
     @@shopping_items = 0
     

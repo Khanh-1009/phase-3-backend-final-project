@@ -16,11 +16,6 @@ class ApplicationController < Sinatra::Base
   end
 
   # Products Routes
-  # get '/products' do
-  #   products = Product.all 
-  #   products.to_json
-  # end
-
   post '/products' do
     brand = Brand.find(params[:brand_id])
     product = brand.products.create(
