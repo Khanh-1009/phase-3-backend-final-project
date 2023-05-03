@@ -17,3 +17,17 @@ The Back-End app is the most critical part in the phase-3 project. I created two
 
 In the controller, I built a Sinatra API and perform various CRUD actions using Active Record. Defining routes that responds to `GET, POST` requests to `/brands` and `POST, PATCH, DELETE` requests to products and returns an array of JSON objects for all products in the database.
 
+Define routes:
+
+`GET /brands`: gets all brands includes products in each brands from the database.
+`POST /brands`: creates a new brand in the database, and returns
+data for the newly created brand as JSON.
+`POST /products`: creates a new product in the database, and returns
+data for the newly created product as JSON.
+`PATCH /products/:id`: updates the price of the product in the database, and
+returns data for the updated product as JSON.
+`DELETE /products/:id`: deletes the product from the database.
+
+## Conclusion
+
+This project shows me how the Back-End is setup, and now I get to know what full-stack development is. It is a difficult project with two seperate parts: React App for the Front-End and Ruby App for the Back-End. In order to complete it, I had to look for many sources (videos, blogs, lectures) and communicate with my instructor frequently. A special thank to my instructor! I am pretty happy about my work!
