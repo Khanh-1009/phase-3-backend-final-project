@@ -1,6 +1,8 @@
 class Shopping
-    attr_accessor :total, :discount, :shopping_cart
+    attr_accessor :total, :discount, :shopping_cart, :customer_name
     @@total_count
+    @@all = []
+
     # def total
     #     @total
     # end
@@ -8,6 +10,16 @@ class Shopping
     # def total=(total)
     #     @total = total
     # end
+
+    def self.all_names
+        @@all.map do |shopping_instance|
+            shopping_instance.customer_name
+        end
+    end
+
+    def self.all
+        @@all
+    end
 
     def self.return_all_total
         @@total_count
@@ -21,6 +33,8 @@ class Shopping
         @shopping_cart = []
         @@shopping_items += 1
         @@total_count += 1
+        @@all << self
+
     end
 
     def self.count
