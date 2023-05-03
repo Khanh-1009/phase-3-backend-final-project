@@ -1,23 +1,23 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
-Brand.create([
-    {
-        name: "Beauty of Joseon"
-    },
-    {
-        name: "Isntree"
-    },
-    {
-        name: "Laneige"
-    },
-    {
-        name: "Skin1004"
-    },
-    {
-        name: "COSRX"
-    }
-])
+# Brand.create([
+#     {
+#         name: "Beauty of Joseon"
+#     },
+#     {
+#         name: "Isntree"
+#     },
+#     {
+#         name: "Laneige"
+#     },
+#     {
+#         name: "Skin1004"
+#     },
+#     {
+#         name: "COSRX"
+#     }
+# ])
 
 Product.create([
     {
@@ -201,8 +201,8 @@ Product.create([
         brand_id: 19
     },
     {
-        name: "Timetreasure Extra Creamy Cleansing Foam",
-        image: "https://cdn.stylevana.com/media/catalog/product/cache/1/image/1000x1231/17f82f742ffe127f42dca9de82fb58b1/s/u/sulwhasoo-timetreasure-extra-creamy-cleansing-foam-150ml-305.jpg",
+        name: "White Ginseng Radiance Refining Mask",
+        image: "https://cdn.stylevana.com/media/catalog/product/cache/1/image/1000x1231/17f82f742ffe127f42dca9de82fb58b1/s/u/sulwhasoo-white-ginseng-radiance-refining-mask-35ml-142.jpg",
         price: 39.69,
         brand_id: 19
     },
